@@ -22,6 +22,11 @@ public class MainLambda {
                 .filter(e -> e % 2 == 0)
                 .mapToInt(e -> e * 2)
                 .sum()
+                //Function composition
+                //.
+                //.
+                //.
+                //.
         );
 
 
