@@ -61,11 +61,17 @@ public class MainLambda {
         //No manipulation/ business logic
 
 
+        System.out.println(numbers.stream().reduce(0, (total, e) -> Integer.sum(total, e)));
 
+        //System.out.println(numbers.stream().reduce(Integer::sum));
 
+        System.out.println(numbers.stream().map(String::valueOf)
+                .reduce("", (carry, str) -> carry.concat(str)));
 
-
-
+        System.out.println(numbers.stream().map(String::valueOf)
+                .reduce("", String::concat));
+        //Cannot use if data manipulation
+        ///Cannot use if conflict between static vs instance methods
 
 
     }
