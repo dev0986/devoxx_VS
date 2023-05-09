@@ -10,6 +10,21 @@ public class MainLambda {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
+        System.out.println(numbers
+                .stream()
+                .filter(e -> e % 2 == 0)
+                .map(e -> e * 2)
+                .reduce(Integer::sum).get()
+        );
+
+        System.out.println(numbers
+                .stream()
+                .filter(e -> e % 2 == 0)
+                .mapToInt(e -> e * 2)
+                .sum()
+        );
+
+
         //println is an instance method on System.out (not a static method)
 //        numbers.forEach(e -> System.out.println(e));
 //        numbers.forEach(System.out::println);
@@ -24,11 +39,11 @@ public class MainLambda {
 //                .forEach(System.out::println);
 
 
-        numbers.stream()
-                .map(e -> String.valueOf(e))
-                //.map(e -> e.toString())
-                .map(String::toString)
-                .forEach(System.out::println);
+//        numbers.stream()
+//                .map(e -> String.valueOf(e))
+//                //.map(e -> e.toString())
+//                .map(String::toString)
+//                .forEach(System.out::println);
 
         //external iterators # 1
         for (int i = 0; i < numbers.size(); i++) { //controlling the iteration
@@ -61,15 +76,15 @@ public class MainLambda {
         //No manipulation/ business logic
 
 
-        System.out.println(numbers.stream().reduce(0, (total, e) -> Integer.sum(total, e)));
-
-        //System.out.println(numbers.stream().reduce(Integer::sum));
-
-        System.out.println(numbers.stream().map(String::valueOf)
-                .reduce("", (carry, str) -> carry.concat(str)));
-
-        System.out.println(numbers.stream().map(String::valueOf)
-                .reduce("", String::concat));
+//        System.out.println(numbers.stream().reduce(0, (total, e) -> Integer.sum(total, e)));
+//
+//        //System.out.println(numbers.stream().reduce(Integer::sum));
+//
+//        System.out.println(numbers.stream().map(String::valueOf)
+//                .reduce("", (carry, str) -> carry.concat(str)));
+//
+//        System.out.println(numbers.stream().map(String::valueOf)
+//                .reduce("", String::concat));
         //Cannot use if data manipulation
         ///Cannot use if conflict between static vs instance methods
 
