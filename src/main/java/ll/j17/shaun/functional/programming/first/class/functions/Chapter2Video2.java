@@ -15,11 +15,11 @@ public class Chapter2Video2 {
         System.out.println(add.apply(10, 30));
 
         // 3 arguments, Custom interface
-        TriFunction<Integer, Integer, Integer, Integer> triFunction = (a, b, c) -> a + b + c;
+        ll.j17.shaun.functional.programming.TriFunction<Integer, Integer, Integer, Integer> triFunction = (a, b, c) -> a + b + c;
         System.out.println(triFunction.apply(1, 2, 3));
 
         //0 Arguments, Custom interface
-        NoArgsfunction<String> noArgsfunction = () -> "Hello World";
+        ll.j17.shaun.functional.programming.NoArgsfunction<String> noArgsfunction = () -> "Hello World";
         System.out.println(noArgsfunction.apply());
     }
 }

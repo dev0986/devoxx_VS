@@ -27,10 +27,10 @@ public class Chapter2Video5 {
     }
 
     public static void main(String[] args) {
-        NoArgsfunction<NoArgsfunction<String>> creatorGreeter =
+        ll.j17.shaun.functional.programming.NoArgsfunction<ll.j17.shaun.functional.programming.NoArgsfunction<String>> creatorGreeter =
                 () -> () -> "Hello function";
         //Function returning a Function that return a String.
-        NoArgsfunction<String> greeter = creatorGreeter.apply();
+        ll.j17.shaun.functional.programming.NoArgsfunction<String> greeter = creatorGreeter.apply();
         System.out.println(greeter.apply());
 
         Function<Integer, Integer> timesTwo = MyMath.createMultiplier(2);

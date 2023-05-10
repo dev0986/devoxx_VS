@@ -14,7 +14,7 @@ public class Chapter2Video3 {
 
     protected static class DataLoader {
 
-        public final NoArgsfunction<Person> loadPerson;
+        public final ll.j17.shaun.functional.programming.NoArgsfunction<Person> loadPerson;
 
         public DataLoader(Boolean isDevelopment) {
             this.loadPerson = isDevelopment

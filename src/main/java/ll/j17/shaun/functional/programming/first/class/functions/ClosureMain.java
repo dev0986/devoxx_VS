@@ -3,18 +3,16 @@ package ll.j17.shaun.functional.programming;
 
 //Closure
 
-import java.util.function.Function;
-
 public class ClosureMain {
 
 
     public static void main(String[] args) {
-        NoArgsfunction<NoArgsfunction<String>> createGreeter = () -> {
+        ll.j17.shaun.functional.programming.NoArgsfunction<ll.j17.shaun.functional.programming.NoArgsfunction<String>> createGreeter = () -> {
             String name = "Shaun";
             return () -> "Hello, " + name;
         };
 
-        NoArgsfunction<String> greeter = createGreeter.apply();
+        ll.j17.shaun.functional.programming.NoArgsfunction<String> greeter = createGreeter.apply();
         System.out.println(greeter.apply());
 
         //TODO ->
