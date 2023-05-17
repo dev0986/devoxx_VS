@@ -9,7 +9,6 @@ public class StockFetcher {
 //            throw new RuntimeException("ohoh");
 //        }
         return new StockInfo(symbol
-                , ThreadLocalRandom.current()
-                .nextDouble(100, 200));
+                , YahooFinance.getPrice(symbol));
     }
 }
