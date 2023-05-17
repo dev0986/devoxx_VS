@@ -13,8 +13,8 @@ public class Person {
     private Gender gender;
     private int age;
 
-    enum Gender {
-        MALE, FEMALE;
+    public enum Gender {
+        MALE, FEMALE, NON_BINARY, THEY, THEM;
 
     }
 }
