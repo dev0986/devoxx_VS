@@ -11,7 +11,7 @@ public class Person {
 
     private String name;
     private Gender gender;
-    private int age;
+    private Integer age;
 
     public enum Gender {
         MALE, FEMALE, NON_BINARY, THEY, THEM;
