@@ -5,11 +5,11 @@ import java.util.concurrent.ThreadLocalRandom;
 public class StockFetcher {
 
     public static StockInfo fetch(String symbol) {
-        if (Math.random() > 0.5) {
-            throw new RuntimeException("ohoh");
-        }
+//        if (Math.random() > 0.5) {
+//            throw new RuntimeException("ohoh");
+//        }
         return new StockInfo(symbol
                 , ThreadLocalRandom.current()
-                .nextDouble(100, 500));
+                .nextDouble(100, 200));
     }
 }

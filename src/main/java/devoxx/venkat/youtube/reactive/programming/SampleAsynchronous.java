@@ -27,7 +27,7 @@ public class SampleAsynchronous {
                 Arrays.asList("GOOG", "AAPL", "MSFT", "INTC");
         Observable<StockInfo> feed = StockServer.getFeed(symbols);
         feed
-                .subscribeOn(Schedulers.io()) //different threads, varying the Asynchrous
+                .subscribeOn(Schedulers.io()) //different # of threads, varying the Asynchrous
                 .subscribe(SampleAsynchronous::printStockInfo);
 
         Thread.sleep(10000);

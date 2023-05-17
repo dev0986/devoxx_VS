@@ -16,6 +16,7 @@ public class StockServer {
 
     private static void processRequest(Subscriber<? super StockInfo> subscriber, List<String> symbols) {
 
+       // while (true) {  //takeWhile() toggle example.
         while (!subscriber.isUnsubscribed()) {
             symbols.stream()
                     .map(StockFetcher::fetch)
